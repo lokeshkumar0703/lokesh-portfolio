@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import fuelItImg from "@/assets/fuel-it.jpg";
+import nikeImg from "@/assets/nike-animation.jpg";
+import portfolioImg from "@/assets/portfolio-website.jpg";
 
 const projects = [
   {
@@ -8,24 +9,21 @@ const projects = [
     description:
       "Multi-platform fuel delivery and management system with vendor and admin modules for managing orders, inventory, and delivery schedules.",
     tech: ["Flutter", "Firebase", "Real-time Tracking"],
-    liveUrl: "#",
-    githubUrl: "#",
+    image: fuelItImg,
   },
   {
     title: "Nike Spinning Animation",
     description:
       "Professional logo animation design using Figma with smooth transitions and visual effects. Showcases creative design and animation skills.",
     tech: ["Figma", "Animation", "UI Design"],
-    liveUrl: "https://www.behance.net/",
-    githubUrl: "https://www.figma.com/",
+    image: nikeImg,
   },
   {
     title: "Portfolio Website",
     description:
       "Modern, responsive portfolio website showcasing projects, skills, and achievements with beautiful animations and clean design.",
     tech: ["React", "TypeScript", "Tailwind CSS"],
-    liveUrl: "#",
-    githubUrl: "#",
+    image: portfolioImg,
   },
 ];
 
@@ -45,8 +43,15 @@ const Projects = () => {
           {projects.map((project) => (
             <Card
               key={project.title}
-              className="shadow-soft hover:shadow-glow transition-all duration-300 border-2 group"
+              className="shadow-soft hover:shadow-glow transition-all duration-300 border-2 group overflow-hidden"
             >
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
               <CardHeader>
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">
                   {project.title}
@@ -54,7 +59,7 @@ const Projects = () => {
                 <CardDescription className="text-base">{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
@@ -63,26 +68,6 @@ const Projects = () => {
                       {tech}
                     </span>
                   ))}
-                </div>
-                <div className="flex gap-3">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 border-2 hover:border-primary hover:bg-primary hover:text-primary-foreground"
-                    onClick={() => window.open(project.liveUrl, "_blank")}
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Live
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 border-2 hover:border-primary hover:bg-primary hover:text-primary-foreground"
-                    onClick={() => window.open(project.githubUrl, "_blank")}
-                  >
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </Button>
                 </div>
               </CardContent>
             </Card>
