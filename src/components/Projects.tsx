@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import fuelItImg from "@/assets/fuel-it.jpg";
 import nikeImg from "@/assets/nike-animation.jpg";
 import portfolioImg from "@/assets/portfolio-website.jpg";
+import lensmanImg from "@/assets/lensman.jpg";
 
 const projects = [
   {
@@ -10,6 +11,13 @@ const projects = [
       "Multi-platform fuel delivery and management system with vendor and admin modules for managing orders, inventory, and delivery schedules.",
     tech: ["Flutter", "Firebase", "Real-time Tracking"],
     image: fuelItImg,
+  },
+  {
+    title: "Lensman",
+    description:
+      "Web-based platform connecting clients with professional photographers. Features portfolio browsing, booking management, and separate dashboards for clients, photographers, and admins.",
+    tech: ["React", "Node.js", "MongoDB", "Express"],
+    image: lensmanImg,
   },
   {
     title: "Nike Spinning Animation",
@@ -22,7 +30,7 @@ const projects = [
     title: "Portfolio Website",
     description:
       "Modern, responsive portfolio website showcasing projects, skills, and achievements with beautiful animations and clean design.",
-    tech: ["React", "TypeScript", "Tailwind CSS"],
+    tech: ["React", "JavaScript", "Tailwind CSS"],
     image: portfolioImg,
   },
 ];

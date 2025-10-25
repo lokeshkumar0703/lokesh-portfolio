@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "./theme-toggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -65,12 +66,15 @@ const Navigation = () => {
             </button>
           </div>
 
-          <Button
-            onClick={() => scrollToSection("contact")}
-            className="bg-primary hover:bg-primary/90 shadow-glow"
-          >
-            Get in Touch
-          </Button>
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <Button
+              onClick={() => scrollToSection("contact")}
+              className="bg-primary hover:bg-primary/90 shadow-glow"
+            >
+              Get in Touch
+            </Button>
+          </div>
         </div>
       </div>
     </nav>

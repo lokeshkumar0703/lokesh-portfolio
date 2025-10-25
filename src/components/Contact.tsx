@@ -65,23 +65,23 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-card/30">
+    <section id="contact" className="py-20 px-4 sm:px-6 bg-card/30">
       <div className="container mx-auto max-w-5xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <p className="text-primary font-semibold mb-2">Get In Touch</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Contact Me</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Contact Me</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto px-4">
             Have a project in mind or just want to chat? Feel free to reach out!
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
           <Card className="shadow-soft border-2">
-            <CardHeader>
-              <CardTitle className="text-2xl">Send a Message</CardTitle>
-              <CardDescription>Fill out the form and I'll get back to you soon</CardDescription>
+            <CardHeader className="px-4 sm:px-6">
+              <CardTitle className="text-xl sm:text-2xl">Send a Message</CardTitle>
+              <CardDescription className="text-sm sm:text-base">Fill out the form and I'll get back to you soon</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="px-4 sm:px-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Input
@@ -121,30 +121,30 @@ const Contact = () => {
 
           <div className="space-y-6">
             <Card className="shadow-soft border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Connect With Me</h3>
+              <CardContent className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold mb-4">Connect With Me</h3>
                 <div className="space-y-4">
                   <a
                     href="mailto:lokeshkumar93605@gmail.com"
-                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base break-all"
                   >
-                    <Mail className="h-5 w-5" />
+                    <Mail className="h-5 w-5 flex-shrink-0" />
                     <span>lokeshkumar93605@gmail.com</span>
                   </a>
                   <a
                     href="https://linkedin.com/in/lokesh-kumar-s0803"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base break-all"
                   >
-                    <Linkedin className="h-5 w-5" />
+                    <Linkedin className="h-5 w-5 flex-shrink-0" />
                     <span>linkedin.com/in/lokesh-kumar-s0803</span>
                   </a>
                   <a
                     href="tel:+919360516987"
-                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base"
                   >
-                    <Phone className="h-5 w-5" />
+                    <Phone className="h-5 w-5 flex-shrink-0" />
                     <span>+91 93605 16987</span>
                   </a>
                 </div>
@@ -152,9 +152,9 @@ const Contact = () => {
             </Card>
 
             <Card className="shadow-soft border-2">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Location</h3>
-                <p className="text-muted-foreground">
+              <CardContent className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold mb-3">Location</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
                   1/827, Ayyappan Nagar<br />
                   New Natham Road, Thiruppalai<br />
                   Madurai – 625014<br />

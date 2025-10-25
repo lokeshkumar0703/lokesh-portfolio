@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail } from "lucide-react";
-import profileImg from "@/assets/lokeshkumarphoto.jpg";
+import profileImg from "@/assets/a.jpg";
 
 const Hero = () => {
   const handleResumeDownload = () => {
@@ -22,7 +22,8 @@ const Hero = () => {
           <img
             src={profileImg}
             alt="Profile"
-            className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover shadow-glow border-4 border-primary/20"
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover object-center shadow-glow border-4 border-primary/20"
+            style={{ objectPosition: 'center center' }}
           />
         </div>
 
