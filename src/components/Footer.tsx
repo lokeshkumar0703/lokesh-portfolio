@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="py-8 px-6 border-t border-border">
       <div className="container mx-auto text-center">
         <p className="text-muted-foreground">
-          © {new Date().getFullYear()} Lokesh Kumar S. Built with ❤️ using React & Tailwind CSS
+          © {new Date().getFullYear()} Lokesh Kumar S. All rights reserved.
         </p>
       </div>
     </footer>

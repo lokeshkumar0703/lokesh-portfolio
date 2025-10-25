@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Linkedin, Github, Twitter, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { useState } from "react";
 
@@ -95,10 +95,13 @@ const Contact = () => {
                     <Linkedin className="h-5 w-5" />
                     <span>linkedin.com/in/lokesh-kumar-s0803</span>
                   </a>
-                  <div className="flex items-center gap-3 text-muted-foreground">
-                    <Github className="h-5 w-5" />
+                  <a
+                    href="tel:+919360516987"
+                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Phone className="h-5 w-5" />
                     <span>+91 93605 16987</span>
-                  </div>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -112,22 +115,6 @@ const Contact = () => {
                   Madurai – 625014<br />
                   Tamil Nadu, India
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-soft border-2 bg-gradient-to-br from-primary/10 to-accent/10">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Professional Objective</h3>
-                <p className="text-muted-foreground mb-4">
-                  To secure a challenging position in a reputed organization that utilizes my technical,
-                  analytical, and problem-solving skills in software development and IT services.
-                </p>
-                <Button
-                  className="bg-accent hover:bg-accent/90 shadow-glow w-full"
-                  onClick={() => window.open("/resume.pdf", "_blank")}
-                >
-                  Download Resume
-                </Button>
               </CardContent>
             </Card>
           </div>
