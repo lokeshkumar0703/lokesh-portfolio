@@ -11,7 +11,7 @@ const About = () => {
         </div>
 
         <div className="max-w-4xl mx-auto mb-12">
-          <p className="text-lg text-muted-foreground leading-relaxed text-center">
+          <p className="text-lg text-muted-foreground leading-relaxed text-justify">
             I'm a dedicated MCA student at Thiagarajar College of Engineering, Madurai, with a strong
             foundation in computer science and software development. My journey began with a B.Sc. in
             Computer Science where I achieved 8.36 CGPA, and I'm currently maintaining a 7.92 CGPA in my
