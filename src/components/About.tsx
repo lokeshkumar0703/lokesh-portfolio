@@ -12,10 +12,11 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto mb-12">
           <p className="text-lg text-muted-foreground leading-relaxed text-center">
-            I'm a passionate Full-Stack Developer with expertise in building modern web applications.
-            I love transforming ideas into elegant solutions using cutting-edge technologies.
-            With a strong foundation in both frontend and backend development, I create
-            seamless digital experiences that users love.
+            I'm a dedicated MCA student at Thiagarajar College of Engineering, Madurai, with a strong
+            foundation in computer science and software development. My journey began with a B.Sc. in
+            Computer Science where I achieved 8.36 CGPA, and I'm currently maintaining a 7.92 CGPA in my
+            Master's program. I'm passionate about utilizing my technical, analytical, and problem-solving
+            skills to create innovative solutions while continuously learning and growing professionally.
           </p>
         </div>
 
@@ -28,12 +29,18 @@ const About = () => {
               </div>
               <ul className="space-y-4">
                 <li>
-                  <h4 className="font-semibold text-foreground">Bachelor's in Computer Science</h4>
-                  <p className="text-muted-foreground">University Name, Year</p>
+                  <h4 className="font-semibold text-foreground">MCA (Master of Computer Applications)</h4>
+                  <p className="text-muted-foreground">Thiagarajar College of Engineering, Madurai</p>
+                  <p className="text-sm text-primary">Anna University • 2026 • CGPA: 7.92</p>
                 </li>
                 <li>
-                  <h4 className="font-semibold text-foreground">Certifications</h4>
-                  <p className="text-muted-foreground">Various online courses & certifications</p>
+                  <h4 className="font-semibold text-foreground">B.Sc. Computer Science</h4>
+                  <p className="text-muted-foreground">Thiagarajar College of Arts and Science</p>
+                  <p className="text-sm text-primary">Madurai Kamaraj University • 2024 • CGPA: 8.36</p>
+                </li>
+                <li>
+                  <h4 className="font-semibold text-foreground">HSC & SSLC</h4>
+                  <p className="text-muted-foreground">St. Michael Matriculation Hr. Sec. School, Madurai</p>
                 </li>
               </ul>
             </CardContent>
@@ -48,7 +55,15 @@ const About = () => {
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                  <span>Full-Stack Development</span>
+                  <span>Software Development</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                  <span>MERN Stack Development</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                  <span>Mobile App Development</span>
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
@@ -56,11 +71,7 @@ const About = () => {
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                  <span>Cloud Architecture</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                  <span>Open Source Contributions</span>
+                  <span>Data Analytics</span>
                 </li>
               </ul>
             </CardContent>

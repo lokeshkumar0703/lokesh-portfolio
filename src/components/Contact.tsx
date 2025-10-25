@@ -80,51 +80,52 @@ const Contact = () => {
                 <h3 className="text-xl font-bold mb-4">Connect With Me</h3>
                 <div className="space-y-4">
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:lokeshkumar93605@gmail.com"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                   >
                     <Mail className="h-5 w-5" />
-                    <span>your.email@example.com</span>
+                    <span>lokeshkumar93605@gmail.com</span>
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://linkedin.com/in/lokesh-kumar-s0803"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                   >
                     <Linkedin className="h-5 w-5" />
-                    <span>LinkedIn Profile</span>
+                    <span>linkedin.com/in/lokesh-kumar-s0803</span>
                   </a>
-                  <a
-                    href="https://github.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <div className="flex items-center gap-3 text-muted-foreground">
                     <Github className="h-5 w-5" />
-                    <span>GitHub Profile</span>
-                  </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Twitter className="h-5 w-5" />
-                    <span>Twitter Profile</span>
-                  </a>
+                    <span>+91 93605 16987</span>
+                  </div>
                 </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-soft border-2">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Location</h3>
+                <p className="text-muted-foreground">
+                  1/827, Ayyappan Nagar<br />
+                  New Natham Road, Thiruppalai<br />
+                  Madurai – 625014<br />
+                  Tamil Nadu, India
+                </p>
               </CardContent>
             </Card>
 
             <Card className="shadow-soft border-2 bg-gradient-to-br from-primary/10 to-accent/10">
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Let's Build Something Amazing</h3>
+                <h3 className="text-xl font-bold mb-3">Professional Objective</h3>
                 <p className="text-muted-foreground mb-4">
-                  I'm always open to discussing new projects, creative ideas, or opportunities to
-                  be part of your vision.
+                  To secure a challenging position in a reputed organization that utilizes my technical,
+                  analytical, and problem-solving skills in software development and IT services.
                 </p>
-                <Button className="bg-accent hover:bg-accent/90 shadow-glow w-full">
+                <Button
+                  className="bg-accent hover:bg-accent/90 shadow-glow w-full"
+                  onClick={() => window.open("/resume.pdf", "_blank")}
+                >
                   Download Resume
                 </Button>
               </CardContent>

@@ -28,19 +28,19 @@ const Hero = () => {
 
         <div className="mb-4">
           <p className="text-lg md:text-xl text-muted-foreground mb-2">
-            Hi, I'm <span className="text-primary font-semibold">Your Name</span> 👋
+            Hi, I'm <span className="text-primary font-semibold">Lokesh Kumar S</span> 👋
           </p>
         </div>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          Full-stack Developer
+          MCA Student &
           <br />
-          <span className="text-gradient">Building Digital Experiences</span>
+          <span className="text-gradient">Aspiring Full-Stack Developer</span>
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-          I craft beautiful, functional web applications with modern technologies.
-          Passionate about clean code, user experience, and continuous learning.
+          Currently pursuing MCA at Thiagarajar College of Engineering, Madurai. Passionate about
+          problem-solving, software development, and creating innovative solutions with modern technologies.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

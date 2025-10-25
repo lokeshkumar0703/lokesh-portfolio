@@ -4,22 +4,25 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with payment integration and admin dashboard",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    title: "Fuel-It: One-Stop Fueling Application",
+    description:
+      "Multi-platform fuel delivery and management system with vendor and admin modules for managing orders, inventory, and delivery schedules.",
+    tech: ["Flutter", "Firebase", "Real-time Tracking"],
     liveUrl: "#",
     githubUrl: "#",
   },
   {
-    title: "Task Management App",
-    description: "Collaborative task management tool with real-time updates and team features",
-    tech: ["React", "Firebase", "Tailwind CSS"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Nike Spinning Animation",
+    description:
+      "Professional logo animation design using Figma with smooth transitions and visual effects. Showcases creative design and animation skills.",
+    tech: ["Figma", "Animation", "UI Design"],
+    liveUrl: "https://www.behance.net/",
+    githubUrl: "https://www.figma.com/",
   },
   {
     title: "Portfolio Website",
-    description: "Modern portfolio website with animations and responsive design",
+    description:
+      "Modern, responsive portfolio website showcasing projects, skills, and achievements with beautiful animations and clean design.",
     tech: ["React", "TypeScript", "Tailwind CSS"],
     liveUrl: "#",
     githubUrl: "#",

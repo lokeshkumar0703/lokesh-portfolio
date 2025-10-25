@@ -1,12 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 
 const skillsData = [
-  { name: "React", level: 90 },
-  { name: "TypeScript", level: 85 },
-  { name: "Node.js", level: 80 },
-  { name: "Python", level: 75 },
-  { name: "Tailwind CSS", level: 90 },
-  { name: "PostgreSQL", level: 70 },
+  { name: "Python", level: 85 },
+  { name: "Java", level: 80 },
+  { name: "C Programming", level: 75 },
+  { name: "SQL", level: 80 },
+  { name: "HTML & CSS", level: 85 },
+  { name: "JavaScript", level: 75 },
+  { name: "MERN Stack", level: 70 },
+  { name: "Flutter", level: 75 },
 ];
 
 const Skills = () => {
@@ -44,18 +46,20 @@ const Skills = () => {
           <h3 className="text-2xl font-bold mb-8">Technologies I Work With</h3>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {[
-              "React",
-              "Next.js",
-              "TypeScript",
-              "Node.js",
-              "Express",
-              "MongoDB",
-              "PostgreSQL",
-              "Tailwind CSS",
-              "Git",
-              "Docker",
-              "AWS",
+              "Python",
+              "Java",
+              "C",
+              "SQL",
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "MERN Stack",
+              "Flutter",
+              "Firebase",
               "Figma",
+              "Postman",
+              "VS Code",
+              "Git",
             ].map((tech) => (
               <span
                 key={tech}
