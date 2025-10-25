@@ -2,9 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Linkedin, Github, Twitter, Phone } from "lucide-react";
+import { Mail, Linkedin, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,11 +13,52 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      // EmailJS credentials
+      const serviceId = 'service_78wpo3o';
+      const templateId = 'template_zi9jide'; // Main template (to you)
+      const autoReplyTemplateId = 'template_bv6uu37'; // Auto-reply template (to visitor)
+      const publicKey = 'xsLJm394b3671GULf';
+
+      // Send email to you
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'lokeshkumar93605@gmail.com',
+        },
+        publicKey
+      );
+
+      // Send auto-reply to visitor
+      await emailjs.send(
+        serviceId,
+        autoReplyTemplateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        publicKey
+      );
+
+      toast.success("Message sent successfully! I'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('Email send error:', error);
+      toast.error("Failed to send message. Please try again or email me directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -67,8 +109,8 @@ const Contact = () => {
                     className="border-2"
                   />
                 </div>
-                <Button type="submit" className="w-full bg-primary hover:bg-primary/90 shadow-glow">
-                  Send Message
+                <Button type="submit" className="w-full bg-primary hover:bg-primary/90 shadow-glow" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
