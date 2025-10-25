@@ -1,0 +1,70 @@
+import { Button } from "@/components/ui/button";
+import { Download, Mail } from "lucide-react";
+import profileImg from "@/assets/profile-placeholder.jpg";
+
+const Hero = () => {
+  const handleResumeDownload = () => {
+    // You can replace this with your actual resume file
+    window.open("/resume.pdf", "_blank");
+  };
+
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6">
+      <div className="container mx-auto text-center animate-in fade-in duration-700">
+        <div className="mb-8 inline-block">
+          <img
+            src={profileImg}
+            alt="Profile"
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover shadow-glow border-4 border-primary/20"
+          />
+        </div>
+
+        <div className="mb-4">
+          <p className="text-lg md:text-xl text-muted-foreground mb-2">
+            Hi, I'm <span className="text-primary font-semibold">Your Name</span> 👋
+          </p>
+        </div>
+
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          Full-stack Developer
+          <br />
+          <span className="text-gradient">Building Digital Experiences</span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
+          I craft beautiful, functional web applications with modern technologies.
+          Passionate about clean code, user experience, and continuous learning.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button
+            onClick={scrollToContact}
+            size="lg"
+            className="bg-primary hover:bg-primary/90 shadow-glow text-lg px-8"
+          >
+            <Mail className="mr-2 h-5 w-5" />
+            Contact Me
+          </Button>
+          <Button
+            onClick={handleResumeDownload}
+            size="lg"
+            variant="outline"
+            className="text-lg px-8 border-2 hover:bg-accent hover:text-accent-foreground hover:border-accent"
+          >
+            <Download className="mr-2 h-5 w-5" />
+            My Resume
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
