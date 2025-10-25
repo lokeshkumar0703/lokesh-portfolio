@@ -18,12 +18,11 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6">
       <div className="container mx-auto text-center animate-in fade-in duration-700">
-        <div className="mb-8 inline-block group">
+        <div className="mb-8 inline-block">
           <img
             src={profileImg}
             alt="Profile"
-            className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover shadow-glow border-4 border-primary/20 transition-all duration-700 ease-out group-hover:scale-110 group-hover:shadow-[0_0_60px_rgba(0,150,255,0.6)] group-hover:border-primary/40 animate-in zoom-in"
-            style={{ animationDuration: '1000ms' }}
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover shadow-glow border-4 border-primary/20"
           />
         </div>
 
