@@ -22,8 +22,8 @@ const Contact = () => {
     try {
       // EmailJS credentials
       const serviceId = 'service_78wpo3o';
-      const templateId = 'template_zi9jide'; // Main template (to you)
-      const autoReplyTemplateId = 'template_bv6uu37'; // Auto-reply template (to visitor)
+      const templateId = 'template_zi9jide';
+      const autoReplyTemplateId = 'template_bv6uu37';
       const publicKey = 'xsLJm394b3671GULf';
 
       // Send email to you
@@ -34,22 +34,25 @@ const Contact = () => {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_email: 'lokeshkumar93605@gmail.com',
         },
         publicKey
       );
 
-      // Send auto-reply to visitor
-      await emailjs.send(
-        serviceId,
-        autoReplyTemplateId,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-        },
-        publicKey
-      );
+      // Try to send auto-reply, but don't fail if it doesn't work
+      try {
+        await emailjs.send(
+          serviceId,
+          autoReplyTemplateId,
+          {
+            to_name: formData.name,
+            reply_to: formData.email,
+            message: formData.message,
+          },
+          publicKey
+        );
+      } catch (autoReplyError) {
+        console.log('Auto-reply failed, but main email sent:', autoReplyError);
+      }
 
       toast.success("Message sent successfully! I'll get back to you soon.");
       setFormData({ name: "", email: "", message: "" });
