@@ -64,7 +64,7 @@ const Projects = () => {
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-base">{project.description}</CardDescription>
+                <CardDescription className="text-base text-justify">{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
