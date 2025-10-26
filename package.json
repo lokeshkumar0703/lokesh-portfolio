@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "homepage": "https://lokeshkumar0703.github.io/lokesh-portfolio",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
