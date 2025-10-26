@@ -77,34 +77,6 @@ const About = () => {
             </CardContent>
           </Card>
         </div>
-
-        <div className="text-center mb-12">
-          <p className="text-accent font-semibold mb-2">Beyond Work</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Hobbies & Interests</h2>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-          <Card className="shadow-soft border-2 hover:shadow-glow hover:border-primary transition-all duration-300">
-            <CardContent className="p-6 text-center">
-              <p className="font-semibold text-foreground">Playing Cricket</p>
-            </CardContent>
-          </Card>
-          <Card className="shadow-soft border-2 hover:shadow-glow hover:border-primary transition-all duration-300">
-            <CardContent className="p-6 text-center">
-              <p className="font-semibold text-foreground">Listening to Music</p>
-            </CardContent>
-          </Card>
-          <Card className="shadow-soft border-2 hover:shadow-glow hover:border-primary transition-all duration-300">
-            <CardContent className="p-6 text-center">
-              <p className="font-semibold text-foreground">Watching Movies</p>
-            </CardContent>
-          </Card>
-          <Card className="shadow-soft border-2 hover:shadow-glow hover:border-primary transition-all duration-300">
-            <CardContent className="p-6 text-center">
-              <p className="font-semibold text-foreground">Traveling</p>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );
