@@ -20,7 +20,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
           <Card className="shadow-soft hover:shadow-glow transition-all duration-300 border-2">
             <CardContent className="p-8">
               <div className="mb-4">
@@ -74,6 +74,34 @@ const About = () => {
                   <span>Data Analytics</span>
                 </li>
               </ul>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="text-center mb-12">
+          <p className="text-accent font-semibold mb-2">Beyond Work</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Hobbies & Interests</h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <Card className="shadow-soft border-2 hover:shadow-glow hover:border-primary transition-all duration-300">
+            <CardContent className="p-6 text-center">
+              <p className="font-semibold text-foreground">Playing Cricket</p>
+            </CardContent>
+          </Card>
+          <Card className="shadow-soft border-2 hover:shadow-glow hover:border-primary transition-all duration-300">
+            <CardContent className="p-6 text-center">
+              <p className="font-semibold text-foreground">Listening to Music</p>
+            </CardContent>
+          </Card>
+          <Card className="shadow-soft border-2 hover:shadow-glow hover:border-primary transition-all duration-300">
+            <CardContent className="p-6 text-center">
+              <p className="font-semibold text-foreground">Watching Movies</p>
+            </CardContent>
+          </Card>
+          <Card className="shadow-soft border-2 hover:shadow-glow hover:border-primary transition-all duration-300">
+            <CardContent className="p-6 text-center">
+              <p className="font-semibold text-foreground">Traveling</p>
             </CardContent>
           </Card>
         </div>
