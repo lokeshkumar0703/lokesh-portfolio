@@ -1,73 +1,127 @@
-# Welcome to your Lovable project
+# Lokesh Kumar S - Portfolio
 
-## Project info
+A modern, responsive portfolio website showcasing my projects, skills, and achievements as an MCA student and aspiring Full-Stack Developer.
 
-**URL**: https://lovable.dev/projects/ecc93589-f4cc-4b7a-9062-199952665d60
+**Live Demo**: [https://lokeshkumar0703.github.io/lokesh-portfolio](https://lokeshkumar0703.github.io/lokesh-portfolio)
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+- **Responsive Design** - Fully responsive across all devices
+- **Dark/Light Mode** - Theme toggle with smooth transitions
+- **Project Showcase** - Featured projects with GitHub links and live demos
+- **Nike Animation Section** - Dedicated showcase with laptop & mobile mockups
+- **Skills & Achievements** - Comprehensive display of technical and personal skills
+- **Contact Form** - Integrated EmailJS for direct communication
+- **Smooth Animations** - Beautiful transitions and hover effects
+- **Brand Gradient Theme** - Custom color scheme with #6CD0FF and #1C2E4C
 
-**Use Lovable**
+## 🛠️ Technologies Used
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ecc93589-f4cc-4b7a-9062-199952665d60) and start prompting.
+This project is built with modern web technologies:
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Vite** - Lightning-fast build tool
+- **React 18** - UI library with hooks
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful, accessible UI components
+- **Lucide React** - Icon library
+- **EmailJS** - Contact form integration
+- **React Router** - Client-side routing
 
-**Use your preferred IDE**
+## 📦 Installation & Setup
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v20 or higher)
+- npm or yarn package manager
 
-Follow these steps:
+### Local Development
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+# Clone the repository
+git clone https://github.com/lokeshkumar0703/lokesh-portfolio.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd lokesh-portfolio
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+The development server will start at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🎨 Project Structure
 
-**Use GitHub Codespaces**
+```
+lokesh-portfolio/
+├── src/
+│   ├── components/          # React components
+│   │   ├── Hero.tsx        # Landing section
+│   │   ├── About.tsx       # About section
+│   │   ├── Projects.tsx    # Projects showcase
+│   │   ├── NikeAnimation.tsx  # Nike video showcase
+│   │   ├── Skills.tsx      # Technical skills
+│   │   ├── Contact.tsx     # Contact form
+│   │   └── ui/             # shadcn/ui components
+│   ├── pages/              # Page components
+│   ├── assets/             # Images, videos, fonts
+│   ├── hooks/              # Custom React hooks
+│   ├── lib/                # Utility functions
+│   └── index.css           # Global styles & theme
+├── public/                 # Static assets
+└── package.json           # Dependencies
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🚀 Deployment
 
-## What technologies are used for this project?
+This portfolio is configured for GitHub Pages deployment:
 
-This project is built with:
+```bash
+# Deploy to GitHub Pages
+npm run deploy
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The site will be deployed to: `https://lokeshkumar0703.github.io/lokesh-portfolio`
 
-## How can I deploy this project?
+### Manual Deployment Steps
 
-Simply open [Lovable](https://lovable.dev/projects/ecc93589-f4cc-4b7a-9062-199952665d60) and click on Share -> Publish.
+1. Build the project: `npm run build`
+2. The build output will be in the `dist/` folder
+3. Deploy the `dist/` folder to your hosting service
 
-## Can I connect a custom domain to my Lovable project?
+## 🎯 Featured Projects
 
-Yes, you can!
+- **Fuel-It** - Multi-platform fuel delivery application (Flutter, Firebase)
+- **Lensman** - Photography booking platform (MERN Stack)
+- **Nike Spinning Animation** - Figma animation showcase
+- **Portfolio Website** - This portfolio (React, TypeScript, Tailwind)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📱 Contact
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **Email**: lokeshkumar11304@gmail.com
+- **GitHub**: [@lokeshkumar0703](https://github.com/lokeshkumar0703)
+- **LinkedIn**: [Lokesh Kumar S](https://www.linkedin.com/in/lokesh-kumar-s-63a4612b3/)
+
+## 📄 License
+
+This project is open source and available for personal and educational use.
+
+## 🙏 Acknowledgments
+
+- Built with [Vite](https://vitejs.dev/)
+- UI components from [shadcn/ui](https://ui.shadcn.com/)
+- Icons from [Lucide](https://lucide.dev/)
+- Deployed on [GitHub Pages](https://pages.github.com/)
+
+---
+
+**Made with ❤️ by Lokesh Kumar S**
