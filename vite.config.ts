@@ -15,5 +15,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/lokesh-portfolio/", // MUST match your repo name
+  base: "/", // Changed for Cloudflare Pages deployment
 }));

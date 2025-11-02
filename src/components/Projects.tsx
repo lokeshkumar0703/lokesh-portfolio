@@ -1,4 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, ExternalLink } from "lucide-react";
 import fuelItImg from "@/assets/fuel-it.jpg";
 import nikeImg from "@/assets/nike-animation.jpg";
 import portfolioImg from "@/assets/portfolio-website.jpg";
@@ -11,6 +13,8 @@ const projects = [
       "Multi-platform fuel delivery and management system with vendor and admin modules for managing orders, inventory, and delivery schedules.",
     tech: ["Flutter", "Firebase", "Real-time Tracking"],
     image: fuelItImg,
+    link: "https://github.com/Nploki",
+    linkType: "github",
   },
   {
     title: "Lensman",
@@ -18,6 +22,8 @@ const projects = [
       "Web-based platform connecting clients with professional photographers. Features portfolio browsing, booking management, and separate dashboards for clients, photographers, and admins.",
     tech: ["React", "Node.js", "MongoDB", "Express"],
     image: lensmanImg,
+    link: "https://github.com/lokeshkumar0703/Lensman",
+    linkType: "github",
   },
   {
     title: "Nike Spinning Animation",
@@ -25,6 +31,8 @@ const projects = [
       "Professional logo animation design using Figma with smooth transitions and visual effects. Showcases creative design and animation skills.",
     tech: ["Figma", "Animation", "UI Design"],
     image: nikeImg,
+    link: "https://www.behance.net/gallery/206886513/Nike-Spinning-Animation-in-Figma/modules/1174753777",
+    linkType: "behance",
   },
   {
     title: "Portfolio Website",
@@ -32,6 +40,8 @@ const projects = [
       "Modern, responsive portfolio website showcasing projects, skills, and achievements with beautiful animations and clean design.",
     tech: ["React", "JavaScript", "Tailwind CSS"],
     image: portfolioImg,
+    link: "https://github.com/lokeshkumar0703/lokesh-portfolio",
+    linkType: "github",
   },
 ];
 
@@ -67,7 +77,7 @@ const Projects = () => {
                 <CardDescription className="text-base text-justify">{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
@@ -77,6 +87,31 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full group/btn"
+                  asChild
+                >
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    {project.linkType === "github" ? (
+                      <>
+                        <Github className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
+                        View on GitHub
+                      </>
+                    ) : (
+                      <>
+                        <ExternalLink className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
+                        View on Behance
+                      </>
+                    )}
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           ))}
