@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail } from "lucide-react";
-import profileImg from "@/assets/a.jpg";
+import profileImg from "@/assets/lokesh-profile.jpg";
 
 const Hero = () => {
   const handleResumeDownload = () => {
-    // You can replace this with your actual resume file
-    window.open("/resume.pdf", "_blank");
+    window.open(`${import.meta.env.BASE_URL}resume.pdf`, "_blank", "noopener,noreferrer");
   };
 
   const scrollToContact = () => {
@@ -34,14 +33,14 @@ const Hero = () => {
         </div>
 
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-          MCA Student &
+          Software Developer &
           <br />
-          <span className="text-gradient">Aspiring Full-Stack Developer</span>
+          <span className="text-gradient">Full-Stack and Mobile Applications</span>
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-          Currently pursuing MCA at Thiagarajar College of Engineering, Madurai. Passionate about
-          problem-solving, software development, and creating innovative solutions with modern technologies.
+          I build responsive web and mobile applications with React, React Native, Node.js, and MongoDB.
+          I also work on applied deep learning and computer vision projects.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

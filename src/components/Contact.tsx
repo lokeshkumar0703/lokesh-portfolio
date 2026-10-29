@@ -2,10 +2,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Linkedin, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { useState } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,41 +16,55 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
+
+    const message = {
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      message: formData.message.trim(),
+    };
+
+    if (!message.name || !message.email || !message.message) {
+      toast.error("Please complete all fields before sending.");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      // EmailJS credentials
       const serviceId = 'service_78wpo3o';
       const templateId = 'template_zi9jide';
       const autoReplyTemplateId = 'template_bv6uu37';
-      const publicKey = 'xsLJm394b3671GULf';
+      const publicKey = 'v0nKZD_DqBccGMngU';
 
       // Send email to you
       await emailjs.send(
         serviceId,
         templateId,
         {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
+          from_name: message.name,
+          from_email: message.email,
+          reply_to: message.email,
+          message: message.message,
         },
         publicKey
       );
 
-      // Try to send auto-reply, but don't fail if it doesn't work
+      // EmailJS limits browser sends to one request per second.
       try {
+        await new Promise((resolve) => window.setTimeout(resolve, 1100));
         await emailjs.send(
           serviceId,
           autoReplyTemplateId,
           {
-            to_name: formData.name,
-            reply_to: formData.email,
-            message: formData.message,
+            to_name: message.name,
+            reply_to: message.email,
+            message: message.message,
           },
           publicKey
         );
       } catch (autoReplyError) {
-        console.log('Auto-reply failed, but main email sent:', autoReplyError);
+        console.warn("Auto-reply failed; the contact message was sent.", autoReplyError);
       }
 
       toast.success("Message sent successfully! I'll get back to you soon.");
@@ -65,12 +78,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 bg-card/30">
+    <section id="contact" className="py-20 px-6 bg-card/30">
       <div className="container mx-auto max-w-3xl">
         <div className="text-center mb-12 sm:mb-16">
           <p className="text-primary font-semibold mb-2">Get In Touch</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Contact Me</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto px-4">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind or just want to chat? Feel free to reach out!
           </p>
         </div>
@@ -82,39 +95,54 @@ const Contact = () => {
           </CardHeader>
           <CardContent className="px-4 sm:px-6">
             <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <Input
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="border-2"
-                  />
-                </div>
-                <div>
-                  <Input
-                    type="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                    className="border-2"
-                  />
-                </div>
-                <div>
-                  <Textarea
-                    placeholder="Your Message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    rows={5}
-                    className="border-2"
-                  />
-                </div>
-                <Button type="submit" className="w-full bg-primary hover:bg-primary/90 shadow-glow" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
+              <div>
+                <Input
+                  name="from_name"
+                  autoComplete="name"
+                  aria-label="Your name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  disabled={isSubmitting}
+                  required
+                  className="border-2"
+                />
+              </div>
+              <div>
+                <Input
+                  name="from_email"
+                  type="email"
+                  autoComplete="email"
+                  aria-label="Your email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  disabled={isSubmitting}
+                  required
+                  className="border-2"
+                />
+              </div>
+              <div>
+                <Textarea
+                  name="message"
+                  aria-label="Your message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  disabled={isSubmitting}
+                  required
+                  rows={5}
+                  className="border-2"
+                />
+              </div>
+              <Button
+                type="submit"
+                className="w-full bg-primary hover:bg-primary/90 shadow-glow"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
             </CardContent>
           </Card>
       </div>

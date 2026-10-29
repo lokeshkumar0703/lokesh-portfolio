@@ -2,11 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Award, Trophy } from "lucide-react";
 
 const certifications = [
-  { name: "SQL Basics", provider: "SoloLearn" },
-  { name: "C Programming Basics", provider: "Great Learning" },
-  { name: "Python for Beginners", provider: "Microsoft" },
-  { name: "Data Analytics with Python", provider: "NPTEL (IIT Roorkee)" },
   { name: "Front End Web Developer", provider: "Infosys Springboard" },
+  { name: "Data Analytics with Python", provider: "NPTEL • IIT Roorkee" },
 ];
 
 const achievements = [
@@ -46,6 +43,29 @@ const Achievements = () => {
                 </Card>
               ))}
             </div>
+
+            {/* Hobbies */}
+            <div className="mt-8">
+              <Card className="shadow-soft border-2">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4">Hobbies & Interests</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-center text-muted-foreground">
+                      <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
+                      <span>Speed Cubing (solving Rubik's Cube under 1.20 min)</span>
+                    </li>
+                    <li className="flex items-center text-muted-foreground">
+                      <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
+                      <span>Playing Cricket & Football</span>
+                    </li>
+                    <li className="flex items-center text-muted-foreground">
+                      <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
+                      <span>Watching Movies</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           {/* Achievements */}
@@ -75,28 +95,6 @@ const Achievements = () => {
               ))}
             </div>
 
-            {/* Hobbies */}
-            <div className="mt-8">
-              <Card className="shadow-soft border-2">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">Hobbies & Interests</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center text-muted-foreground">
-                      <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                      <span>Speed Cubing (solving Rubik's Cube under 1.20 min)</span>
-                    </li>
-                    <li className="flex items-center text-muted-foreground">
-                      <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                      <span>Playing Cricket & Football</span>
-                    </li>
-                    <li className="flex items-center text-muted-foreground">
-                      <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                      <span>Watching Movies</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </div>

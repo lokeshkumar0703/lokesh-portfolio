@@ -100,6 +100,40 @@ All colors MUST be HSL.
   }
 }
 
+@layer components {
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 64rem;
+    margin-inline: auto;
+  }
+
+  .skills-grid > .skill-card {
+    flex: 0 0 calc((100% - 1.5rem) / 2);
+  }
+
+  @media (min-width: 640px) {
+    .skills-grid > .skill-card {
+      flex-basis: calc((100% - 3rem) / 3);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .skills-grid > .skill-card {
+      flex-basis: calc((100% - 4.5rem) / 4);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .skills-grid > .skill-card {
+      flex-basis: calc((100% - 6rem) / 5);
+    }
+  }
+}
+
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;

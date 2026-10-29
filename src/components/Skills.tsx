@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import excelLogo from "@/assets/excel.svg";
 
 const skillsData = [
   { 
@@ -9,6 +10,7 @@ const skillsData = [
     name: "Java", 
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
   },
+  { name: "R", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" },
   { 
     name: "C Programming", 
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
@@ -29,10 +31,15 @@ const skillsData = [
     name: "React", 
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
   },
+  { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
   { 
     name: "Node.js", 
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
   },
+  { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+  { name: "REST APIs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
   { 
     name: "MongoDB", 
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
@@ -45,6 +52,8 @@ const skillsData = [
     name: "Firebase", 
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
   },
+  { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+  { name: "Excel", icon: excelLogo },
   { 
     name: "Git", 
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
@@ -75,11 +84,11 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+        <div className="skills-grid">
           {skillsData.map((skill, index) => (
             <Card 
               key={skill.name} 
-              className="shadow-soft border-2 hover:border-primary hover:shadow-glow transition-all duration-500 ease-in-out cursor-default group hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-4"
+              className="skill-card shadow-soft border-2 hover:border-primary hover:shadow-glow transition-all duration-500 ease-in-out cursor-default group hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
